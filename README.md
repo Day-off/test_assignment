@@ -41,7 +41,7 @@ This project consists of a backend and a frontend component. Below is a detailed
    - `docker-compose up -d`
    - If you want to use another database, configure your database settings in the [application.properties](backend/src/main/resources/application.properties) file.
 6. Run the application using your IDE or command line.
-   - `./gradlew bootRun`
+   - `'./gradlew bootRun'`
 
 
 ### Frontend Setup
@@ -49,8 +49,8 @@ This project consists of a backend and a frontend component. Below is a detailed
 1. Ensure you have Node.js (`18 <`) and npm installed.
 2. Navigate to the frontend directory.
 3. Run `npm install` to install all dependencies.
-4. Use the following commands for different tasks:
-    - `npm run dev`: Start the development server.
+4.  Run the application using your IDE or command line.
+    - `npm run dev`
 
 ## Functionality
 
