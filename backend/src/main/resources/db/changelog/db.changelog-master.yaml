@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - includeAll:
+      path: db/migrations/main
+  - includeAll:
+      path: db/migrations/test.data
