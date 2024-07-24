@@ -94,9 +94,3 @@ This project consists of a backend and a frontend component, developed as a test
     - **Edit**: Edit a filter (opens modal/dialog depending on the mode).
 - **Create New Filter**: Button above the table to create a new filter.
 - **Switch Mode**: Button above the table to switch between modal and non-modal modes.
-
-## Future Development (Conditionally)
-
-- Add sorting and pagination to the table.
-- Configure security.
-- Make more reusable custom components on the frontend (e.g., input field).
