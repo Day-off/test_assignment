@@ -1,4 +1,3 @@
-<!-- src/App.vue -->
 <template>
   <div id="app">
     <FilterPage />
@@ -10,7 +9,7 @@ import FilterPage from './page/filter-page.vue';
 
 export default {
   components: {
-    FilterPage
-  }
+    FilterPage,
+  },
 };
 </script>
