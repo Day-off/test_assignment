@@ -120,7 +120,9 @@ export default {
               conditionName: 'Less',
               criterionTypeId: 1,
             },
-            conditionValue: '',
+            conditionValueNumber: null,
+            conditionValueText: null,
+            conditionValueDate: null,
           },
         ],
       };

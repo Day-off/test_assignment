@@ -50,6 +50,7 @@ public class CustomFilterService {
         customFilter.setName(requestDto.getName());
 
         updateCriteria(requestDto, customFilter);
+
         removeDeletedCriteria(requestDto, customFilter);
 
         criterionRepository.saveAll(customFilter.getCriteria());
@@ -79,7 +80,10 @@ public class CustomFilterService {
     private void updateCriterionFields(CriterionDto criterionDto, Criterion criterion) {
         criterion.setCriterionType(customFilterMapper.toCriterionType(criterionDto.getCriterionType()));
         criterion.setComparingConditionType(customFilterMapper.toComparingConditionType(criterionDto.getComparingConditionType()));
-        criterion.setConditionValue(criterionDto.getConditionValue());
+
+        criterion.setConditionValueNumber(criterionDto.getConditionValueNumber());
+        criterion.setConditionValueText(criterionDto.getConditionValueText());
+        criterion.setConditionValueDate(criterionDto.getConditionValueDate());
     }
 
     private void removeDeletedCriteria(CustomFilterDto requestDto, CustomFilter customFilter) {

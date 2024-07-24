@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/backend/src/main/resources/db/migrations/main/V202407152050__base_tables.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/backend/src/main/resources/db/migrations/main/V202407242035__update_condition_value_column.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/backend/src/main/resources/db/migrations/test.data/test_data.sql" dialect="H2" />
     <file url="PROJECT" dialect="H2" />
   </component>

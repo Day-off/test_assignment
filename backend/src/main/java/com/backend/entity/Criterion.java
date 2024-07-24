@@ -3,6 +3,8 @@ package com.backend.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "criterion")
 @Data
@@ -24,5 +26,9 @@ public class Criterion {
     @JoinColumn(name = "comparing_condition_type_id", nullable = false)
     private ComparingConditionType comparingConditionType;
 
-    private String conditionValue;
+    private Long conditionValueNumber;
+
+    private String conditionValueText;
+
+    private Date conditionValueDate;
 }

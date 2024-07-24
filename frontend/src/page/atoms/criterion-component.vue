@@ -37,21 +37,21 @@
       >
       <input
         v-if="isNumberType(criterion.criterionType?.name)"
-        v-model="criterion.conditionValue"
+        v-model="criterion.conditionValueNumber"
         type="number"
         :id="`conditionValue${index}`"
         class="border rounded-md px-3 py-2"
       />
       <input
         v-if="isTextType(criterion.criterionType?.name)"
-        v-model="criterion.conditionValue"
+        v-model="criterion.conditionValueText"
         type="text"
         :id="`conditionValue${index}`"
         class="border rounded-md px-3 py-2"
       />
       <input
         v-if="isDateType(criterion.criterionType?.name)"
-        v-model="criterion.conditionValue"
+        v-model="criterion.conditionValueDate"
         type="date"
         :id="`conditionValue${index}`"
         class="border rounded-md px-3 py-2"

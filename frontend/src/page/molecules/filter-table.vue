@@ -35,7 +35,7 @@
                   ' ' +
                   criterion.comparingConditionType.conditionName
                 }}:
-                {{ criterion.conditionValue }}
+                {{ getCriterionValue(criterion) }}
               </li>
             </ul>
           </div>
@@ -86,6 +86,15 @@ export default {
     },
     isDropdownOpen(filterId) {
       return this.openDropdownId === filterId;
+    },
+    getCriterionValue(criterion) {
+      if (criterion.conditionValueNumber != null) {
+        return criterion.conditionValueNumber;
+      }
+      if (criterion.conditionValueText != null) {
+        return criterion.conditionValueText;
+      }
+      return criterion.conditionValueDate;
     },
   },
 };

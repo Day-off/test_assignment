@@ -36,8 +36,8 @@
     <div class="flex justify-between pt-20">
       <AppButton color="gray-outline" @click="closeModal">Cancel</AppButton>
       <AppButton @click="handleSubmit" color="green" :disabled="!isFormValid"
-        >Save</AppButton
-      >
+        >Save
+      </AppButton>
     </div>
   </div>
 </template>
@@ -120,7 +120,9 @@ export default {
         this.filter.criteria.push({
           criterionType: defaultCriterionType,
           comparingConditionType: defaultConditionType,
-          conditionValue: '',
+          conditionValueNumber: null,
+          conditionValueText: null,
+          conditionValueDate: null,
         });
       } else {
         alert('No criterion types available.');
@@ -144,7 +146,11 @@ export default {
     },
 
     isCriterionValid(criterion) {
-      return criterion.conditionValue?.toString().trim() !== '';
+      return (
+        criterion.conditionValueNumber !== null ||
+        criterion.conditionValueText !== null ||
+        criterion.conditionValueDate !== null
+      );
     },
 
     resetForm() {
