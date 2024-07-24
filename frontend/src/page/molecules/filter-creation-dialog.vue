@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-6 w-full sm:w3/4 lg:w-1/2">
+  <div class="bg-white p-6 w-3/5">
     <div class="dialog-content bg-white pt-6 pb-6 rounded-lg w-full max-w-4xl">
       <h2 v-if="isUpdateFilter" class="text-lg font-semibold mb-4">
         Edit Filter

@@ -6,7 +6,7 @@
       <div v-if="showButton">
         <AppButton @click="openCreateFilterForm">Create New Filter</AppButton>
       </div>
-      <div class="ml-auto">
+      <div class="ml-auto flex items-center space-x-2">
         <AppButton @click="toggleModalMode" :color="getToggleButtonColor">
           {{ modalMode ? 'Switch to Non-Modal Mode' : 'Switch to Modal Mode' }}
         </AppButton>
@@ -58,6 +58,7 @@ export default {
       selectedFilter: null,
     };
   },
+
   computed: {
     ...mapGetters('useFilterStore', ['allFilters']),
 

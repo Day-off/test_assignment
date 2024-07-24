@@ -3,10 +3,9 @@ package com.backend.rest;
 import com.backend.dto.CustomFilterDto;
 import com.backend.service.CustomFilterService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,8 +16,9 @@ public class CustomFilterRestController {
     private final CustomFilterService customFilterService;
 
     @GetMapping
-    public List<CustomFilterDto> getAllFilters() {
-        return customFilterService.getAllFilters();
+    public Page<CustomFilterDto> getAllFilters(@RequestParam(defaultValue = "0") int page,
+                                               @RequestParam(defaultValue = "10") int size) {
+        return customFilterService.getAllFilters(page, size);
     }
 
     @PostMapping("/save")

@@ -2,7 +2,7 @@
   <div
     class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50"
   >
-    <div ref="modalContent" class="modal-content">
+    <div ref="modalContent" class="modal-content w-1/4">
       <h2 v-if="isUpdateFilter" class="text-lg font-semibold mb-4">
         Edit Filter
       </h2>
@@ -89,7 +89,6 @@ export default {
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 50%;
   max-height: 80vh;
   overflow-y: auto;
   resize: vertical;

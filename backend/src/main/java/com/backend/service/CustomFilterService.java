@@ -8,6 +8,7 @@ import com.backend.mapper.CustomFilterMapper;
 import com.backend.repository.CriterionRepository;
 import com.backend.repository.CustomFilterRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,9 +24,11 @@ public class CustomFilterService {
     private final CriterionRepository criterionRepository;
     private final CustomFilterMapper customFilterMapper;
 
-    public List<CustomFilterDto> getAllFilters() {
-        List<CustomFilter> filters = customFilterRepository.findAll();
-        return customFilterMapper.toCustomFilterDtos(filters);
+    public Page<CustomFilterDto> getAllFilters(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by("id").ascending());
+        Page<CustomFilter> filtersPage = customFilterRepository.findAll(pageable);
+        List<CustomFilterDto> filterDtos = customFilterMapper.toCustomFilterDtos(filtersPage.getContent());
+        return new PageImpl<>(filterDtos, pageable, filtersPage.getTotalElements());
     }
 
     @Transactional
